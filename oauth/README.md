@@ -7,8 +7,13 @@
 ```
 oauth
   |
-  |----back-end（后端代码）
-  |----front-end（前端代码）
-  |----README.md
-  |----LICENSE
+  |---- back-end（后端代码）
+  |      |---- index.js
+  |      |---- package.json
+  |
+  |---- front-end（前端代码）
+  |      |---- index.html
+  |
+  |---- README.md
+  |---- LICENSE
 ```
