@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oauth 2.0</title>
+  </head>
+  <body>
+    <a class="login-link">登录 GitHub</a>
+    <div class="welcome"></div>
+  </body>
+  <script>
+    let client_id = 'cdbdc26e987d1cf6c057';
+    let authorize_uri = 'https://github.com/login/oauth/authorize';
+    let redirect_uri = 'http://localhost:9090/login/github';
+
+    const loginLink = document.querySelector(".login-link");
+    loginLink.href = `${authorize_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+    
+    const query = window.location.search.substring(1) || '';
+    const name = query.split('data=')[1];
+
+    const welcome = document.querySelector(".welcome");
+    welcome.innerText = `Welcome, ${window.decodeURIComponent(name)}`;
+  </script>
+</html>
