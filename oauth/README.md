@@ -4,9 +4,11 @@
 
 # 2. 项目结构
 
+```
 oauth
   |
   |----back-end（后端代码）
   |----front-end（前端代码）
   |----README.md
   |----LICENSE
+```
