@@ -18,7 +18,7 @@
     loginLink.href = `${authorize_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}`;
     
     const query = window.location.search.substring(1) || '';
-    const name = query.split('data=')[1];
+    const name = query.split('name=')[1];
 
     const welcome = document.querySelector(".welcome");
     welcome.innerText = `Welcome, ${window.decodeURIComponent(name)}`;
